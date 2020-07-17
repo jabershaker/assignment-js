@@ -1,16 +1,9 @@
 //feetToMile
 function feetToMile(feet) {
-    var mile = feet / 5280;
+    var mile = feet * 0.000189394;
     return mile;
 }
-var mileCalculator = feetToMile(10000);
-console.log(mileCalculator);
 
-var mileCalculator1 = feetToMile(40000);
-console.log(mileCalculator1);
-
-var mileCalculator2 = feetToMile(75000);
-console.log(mileCalculator2);
 
 //woodCalculator
 function woodCalculator(chair, table, bed) {
@@ -20,12 +13,37 @@ function woodCalculator(chair, table, bed) {
     var totalWood = chaircount + tablecount + bedcount;
     return totalWood;
 }
-var woodResult = woodCalculator(20, 12, 7);
-console.log(woodResult);
+
+
 
 //brickCalculator
-function brickCalculator() {
+function brickCalculator(floor) {
+    if(floor <= 10){
+      var brick = floor * 15000;
     
+    }
+    else if(floor <= 20){
+      var brick = floor * 12000;
+    }
+    else{
+      var brick = floor * 10000;
+    }
+      
+     return brick;
+  }
+  
 
-}
+//tinyFriend
+function tinyFriend(smallName) {
+    var shortest = smallName[0];
+    
+    
+    for(var i = 0; i < smallName.length; i++){
+      if(shortest.length > smallName[i].length){
+        shortest = smallName[i];
+      }
+    }
+    return shortest;
+  }
+  
 
